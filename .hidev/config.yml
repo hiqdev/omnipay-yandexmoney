@@ -1,0 +1,12 @@
+package:
+    name:           php-merchant-yandexmoney
+    namespace:      hiqdev\php\merchant\yandexmoney
+    title:          Yandex.Money plugin for PHP merchant library
+    type:           library
+    keywords:       php, yandexmoney, merchant
+    description:    |
+        [Yandex.Money](https://money.yandex.ru/) plugin for [PHP merchant library](https://github.com/hiqdev/php-merchant).
+
+require:
+    hiqdev/hidev-config:        "*"
+    hiqdev/hidev-config-php:    "*"
