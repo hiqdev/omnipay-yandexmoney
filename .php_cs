@@ -6,7 +6,7 @@ Yandex.Money plugin for PHP merchant library
 @link      https://github.com/hiqdev/php-merchant-yandexmoney
 @package   php-merchant-yandexmoney
 @license   BSD-3-Clause
-@copyright Copyright (c) 2015, HiQDev (https://hiqdev.com/)
+@copyright Copyright (c) 2015, HiQDev (http://hiqdev.com/)
 EOF;
 
 Symfony\CS\Fixer\Contrib\HeaderCommentFixer::setHeader($header);
