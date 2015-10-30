@@ -14,7 +14,7 @@ namespace hiqdev\php\merchant\yandexmoney;
 class Merchant extends \hiqdev\php\merchant\Merchant
 {
     protected static $_defaults = [
-        'name'      => 'yandexmoney',
+        'system'    => 'yandexmoney',
         'label'     => 'Yandex.Money',
         'actionUrl' => 'https://money.yandex.ru/quickpay/confirm.xml',
     ];
