@@ -44,7 +44,7 @@ class Merchant extends \hiqdev\php\merchant\Merchant
         }
         $hash = implode('&', [
             $data['notification_type'], $data['operation_id'], $data['amount'], $data['currency'],
-            $data['datetime'], $data['sender'], $data['codepro'], $this->secret, $data['label'],
+            $data['datetime'], $data['sender'], $data['codepro'], $this->_secret, $data['label'],
         ]);
         if (hash('sha1', $hash) !== $data['sha1_hash']) {
             return 'Wrong hash';
