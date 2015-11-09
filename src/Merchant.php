@@ -1,11 +1,11 @@
 <?php
 
 /*
- * Yandex.Money plugin for PHP merchant library
+ * Yandex.Money driver for Omnipay PHP payment library
  *
- * @link      https://github.com/hiqdev/php-merchant-yandexmoney
- * @package   php-merchant-yandexmoney
- * @license   BSD-3-Clause
+ * @link      https://github.com/hiqdev/omnipay-yandexmoney
+ * @package   omnipay-yandexmoney
+ * @license   MIT
  * @copyright Copyright (c) 2015, HiQDev (http://hiqdev.com/)
  */
 
