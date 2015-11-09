@@ -1,5 +1,5 @@
-hiqdev/php-merchant-yandexmoney commits history
------------------------------------------------
+hiqdev/omnipay-yandexmoney commits history
+------------------------------------------
 
 ## Under development
 

@@ -1,5 +1,5 @@
-hiqdev/php-merchant-yandexmoney changelog
------------------------------------------
+hiqdev/omnipay-yandexmoney changelog
+------------------------------------
 
 ## Under development
 
