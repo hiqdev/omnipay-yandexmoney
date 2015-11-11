@@ -1,6 +1,6 @@
 package:
     name:           omnipay-yandexmoney
-    namespace:      hiqdev\php\merchant\yandexmoney
+    namespace:      Omnipay\YandexMoney
     headline:       Omnipay: Yandex.Money
     title:          Yandex.Money driver for Omnipay PHP payment library
     type:           library
