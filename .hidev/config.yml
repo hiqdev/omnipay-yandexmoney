@@ -12,5 +12,5 @@ package:
         This package implements [Yandex.Money](https://money.yandex.ru/) support for Omnipay.
 
 require:
-    hiqdev/hidev-config:        "*"
-    hiqdev/hidev-config-php:    "*"
+    hiqdev/hidev-vendor: "*"
+    hiqdev/hidev-php:    "*"
