@@ -1,16 +1,17 @@
 package:
+    type:           library
     name:           omnipay-yandexmoney
     namespace:      Omnipay\YandexMoney
-    headline:       Omnipay: Yandex.Money
+    headline:       'Omnipay: Yandex.Money'
     title:          Yandex.Money driver for Omnipay PHP payment library
-    type:           library
     license:        MIT
     keywords:       php, omnipay, yandex.money, merchant, payment
+    year:           2015
     description:    |
         [Omnipay](https://github.com/omnipay/omnipay) is a framework agnostic, multi-gateway payment
         processing library for PHP 5.3+.
         This package implements [Yandex.Money](https://money.yandex.ru/) support for Omnipay.
 
 require:
-    hiqdev/hidev-vendor: "*"
     hiqdev/hidev-php:    "*"
+    hiqdev/hidev-vendor: "*"

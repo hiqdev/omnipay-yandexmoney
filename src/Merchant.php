@@ -6,7 +6,7 @@
  * @link      https://github.com/hiqdev/omnipay-yandexmoney
  * @package   omnipay-yandexmoney
  * @license   MIT
- * @copyright Copyright (c) 2015, HiQDev (http://hiqdev.com/)
+ * @copyright Copyright (c) 2015-2016, HiQDev (http://hiqdev.com/)
  */
 
 namespace hiqdev\php\merchant\yandexmoney;
