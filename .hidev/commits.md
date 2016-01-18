@@ -4,6 +4,7 @@ hiqdev/omnipay-yandexmoney commits history
 ## Under development
 
 - Redone to `omnipay-yandexmoney`
+    - 5c1e774 2016-01-18 fixed build (sol@hiqdev.com)
     - 5f4507a 2015-12-11 removed assets, now in `payment-icons` (sol@hiqdev.com)
     - 3bce72b 2015-11-11 fixed namespace (sol@hiqdev.com)
     - e530fdd 2015-11-09 php-cs-fixed (sol@hiqdev.com)
