@@ -7,24 +7,9 @@ namespace Omnipay\YandexMoney\Message\p2p;
  */
 class PurchaseRequest extends AbstractRequest
 {
-    public function setLabel($value)
+    public function getComment()
     {
-        return $this->setParameter('label', $value);
-    }
-
-    public function getLabel()
-    {
-        return $this->getParameter('label');
-    }
-
-    public function setFormComment($value)
-    {
-        return $this->setParameter('form_comment', $value);
-    }
-
-    public function getFormComment()
-    {
-        return $this->getParameter('form_comment');
+        return $this->getParameter('comment');
     }
 
     public function setComment($value)
@@ -32,44 +17,19 @@ class PurchaseRequest extends AbstractRequest
         return $this->setParameter('comment', $value);
     }
 
-    public function getComment()
-    {
-        return $this->getParameter('comment');
-    }
-
-    public function setShortDest($value)
-    {
-        return $this->setParameter('short-dest', $value);
-    }
-
-    public function getShortDest()
-    {
-        return $this->getParameter('short-dest');
-    }
-
-    public function getOrderId()
-    {
-        return $this->getParameter('orderId');
-    }
-
-    public function setOrderId($value)
-    {
-        return $this->setParameter('orderId', $value);
-    }
-
     public function getData()
     {
-        $this->validate('account', 'form_comment', 'orderId', 'amount', 'method', 'returnUrl', 'cancelUrl');
+        $this->validate('account', 'description', 'transactionId', 'amount', 'paymentMethod', 'returnUrl', 'cancelUrl');
 
-        $data = array();
+        $data = [];
         $data['receiver'] = $this->getAccount();
-        $data['formcomment'] = $this->getFormComment(); // Имя магазина
-        $data['short-dest'] = $this->getShortDest(); // Описание покупки
+        $data['formcomment'] = $this->getDescription();
+        $data['short-dest'] = $this->getDescription();
         $data['writable-targets'] = 'false';
         $data['comment-needed'] = 'true';
-        $data['label'] = $this->getOrderId();
+        $data['label'] = $this->getTransactionId();
         $data['quickpay-form'] = 'shop';
-        $data['targets'] = 'Order ' . $this->getOrderId();
+        $data['targets'] = 'Order ' . $this->getTransactionId();
         $data['sum'] = $this->getAmount();
         $data['comment'] = $this->getComment();
         $data['need-fio'] = 'yes';
@@ -77,7 +37,7 @@ class PurchaseRequest extends AbstractRequest
         $data['need-phone'] = 'false';
         $data['need-address'] = 'false';
 
-        $data['paymentType'] = $this->getMethod();
+        $data['paymentType'] = $this->getPaymentMethod();
 
         $data['successURL'] = $this->getReturnUrl();
         $data['failURL'] = $this->getCancelUrl();

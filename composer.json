@@ -54,7 +54,9 @@
     },
     "autoload": {
         "psr-4": {
-            "Omnipay\\YandexMoney\\": "src"
+            "Omnipay\\YandexMoney\\": "src",
+            "Omnipay\\YandexMoney\\Tests\\": "tests",
+            "Omnipay\\YandexMoney\\Tests\\Stubs\\": "tests/stubs"
         }
     }
 }

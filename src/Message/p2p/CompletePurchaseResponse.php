@@ -21,12 +21,12 @@ class CompletePurchaseResponse extends AbstractResponse
     {
         parent::__construct($request, $data);
 
-        if ($this->getUnaccepted() !== 'false') {
-            throw new InvalidResponseException('Transaction not done');
+        if ($this->getSha1Hash() !== $this->calculateHash()) {
+            throw new InvalidResponseException('Failed to validate signature');
         }
 
-        if ($this->getSha1Hash() !== $this->calculateHash()) {
-            throw new InvalidResponseException('Invalid hash');
+        if ($this->getUnaccepted() !== 'false') {
+            throw new InvalidResponseException('The payment was not success');
         }
     }
 
@@ -106,12 +106,20 @@ class CompletePurchaseResponse extends AbstractResponse
         return $this->data['label'];
     }
 
+    public function getTransactionId()
+    {
+        return $this->getLabel();
+    }
 
     public function getSha1Hash()
     {
         return $this->data['sha1_hash'];
     }
 
+    public function getTime()
+    {
+        return $this->getDatetime();
+    }
 
     public function getSha1_hash()
     {
@@ -177,6 +185,15 @@ class CompletePurchaseResponse extends AbstractResponse
         return $this->data['phone'];
     }
 
+    public function getOperationLabel()
+    {
+        return $this->data['operation_label'];
+    }
+
+    public function getOperation_label()
+    {
+        return $this->data['operation_label'];
+    }
 
     public function isSuccessful()
     {
