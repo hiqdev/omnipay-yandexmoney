@@ -105,5 +105,7 @@ class CompletePurchaseResponseTest extends TestCase
         $this->assertSame($stub->phone, $response->getPhone());
 
         $this->assertSame(false, $response->getMessage());
+        $this->assertSame($this->password, $response->request->getSecret());
+        $this->assertSame($this->password, $response->request->getPassword());
     }
 }

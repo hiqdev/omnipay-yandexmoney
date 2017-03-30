@@ -34,22 +34,22 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
 
     public function getPassword()
     {
-        return $this->getSecretKey();
+        return $this->getParameter('password');
     }
 
     public function setPassword($value)
     {
-        return $this->setSecretKey($value);
-    }
-
-    public function getSecretKey()
-    {
-        return $this->getParameter('password');
-    }
-
-    public function setSecretKey($value)
-    {
         return $this->setParameter('password', $value);
+    }
+
+    public function getSecret()
+    {
+        return $this->getPassword();
+    }
+
+    public function setSecret($value)
+    {
+        return $this->setPassword($value);
     }
 
     public function getMethod()
