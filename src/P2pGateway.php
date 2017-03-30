@@ -1,4 +1,12 @@
 <?php
+/**
+ * Yandex.Money driver for Omnipay PHP payment library
+ *
+ * @link      https://github.com/hiqdev/omnipay-yandexmoney
+ * @package   omnipay-yandexmoney
+ * @license   MIT
+ * @copyright Copyright (c) 2017, HiQDev (http://hiqdev.com/)
+ */
 
 namespace Omnipay\YandexMoney;
 
@@ -15,10 +23,10 @@ class P2pGateway extends AbstractGateway
 
     public function getDefaultParameters()
     {
-        return array(
+        return [
             'account' => '',
             'password' => '',
-        );
+        ];
     }
 
     public function getPassword()
@@ -65,7 +73,7 @@ class P2pGateway extends AbstractGateway
      * @param array $parameters
      * @return PurchaseRequest
      */
-    public function purchase(array $parameters = array())
+    public function purchase(array $parameters = [])
     {
         return $this->createRequest(PurchaseRequest::class, $parameters);
     }
@@ -74,7 +82,7 @@ class P2pGateway extends AbstractGateway
      * @param array $parameters
      * @return CompletePurchaseRequest
      */
-    public function completePurchase(array $parameters = array())
+    public function completePurchase(array $parameters = [])
     {
         return $this->createRequest(CompletePurchaseRequest::class, $parameters);
     }
