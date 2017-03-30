@@ -72,10 +72,9 @@ class CompletePurchaseResponse extends AbstractResponse
         return $this->data['operation_id'];
     }
 
-
     public function getOperation_id()
     {
-        return $this->data['operation_id'];
+        return $this->getOperationId();
     }
 
     public function getCurrencyId()
@@ -214,11 +213,7 @@ class CompletePurchaseResponse extends AbstractResponse
 
     public function getMessage()
     {
-        if ($this->isSuccessful()) {
-            return false;
-        } else {
-            return 'HTTP/1.0 401 Unauthorized';
-        }
+        return false;
     }
 
     public function getTransactionReference()

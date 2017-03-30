@@ -44,6 +44,14 @@ class P2pGatewayTest extends GatewayTestCase
         $this->assertSame($this->password, $this->gateway->getSignKey());
     }
 
+    public function testGatewayAlternativeSetup()
+    {
+        $this->gateway->setPurse($this->account);
+        $this->gateway->setSignKey($this->password);
+
+        $this->testGateway();
+    }
+
     public function testCompletePurchase()
     {
         $request = $this->gateway->completePurchase([

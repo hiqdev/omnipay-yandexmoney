@@ -30,10 +30,6 @@ class PurchaseResponse extends AbstractResponse implements RedirectResponseInter
 
     public function getRedirectUrl()
     {
-        if ($this->getRequest()->getTestMode()) {
-            return 'https://demomoney.yandex.ru/quickpay/confirm.xml';
-        }
-
         return 'https://money.yandex.ru/quickpay/confirm.xml';
     }
 

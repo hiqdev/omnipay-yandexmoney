@@ -10,7 +10,6 @@
 
 namespace Omnipay\YandexMoney\Tests\Message\p2p;
 
-use Omnipay\Common\PaymentMethod;
 use Omnipay\Tests\TestCase;
 use Omnipay\YandexMoney\Message\p2p\PurchaseRequest;
 use Omnipay\YandexMoney\Tests\Stubs\PurchaseRequestStub;
