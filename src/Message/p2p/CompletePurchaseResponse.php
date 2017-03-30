@@ -71,10 +71,19 @@ class CompletePurchaseResponse extends AbstractResponse
         return $this->data['operation_id'];
     }
 
-
-    public function getCurrency()
+    public function getCurrencyId()
     {
         return $this->data['currency'];
+    }
+
+    /**
+     * @return string Always "RUB".
+     * Yandex always returns currency=643 (mapped to currencyId), so currency is always RUB.
+     * @see https://tech.yandex.ru/money/doc/dg/reference/notification-p2p-incoming-docpage/
+     */
+    public function getCurrency()
+    {
+        return 'RUB';
     }
 
     public function getDatetime()
@@ -82,18 +91,15 @@ class CompletePurchaseResponse extends AbstractResponse
         return $this->data['datetime'];
     }
 
-
     public function getSender()
     {
         return $this->data['sender'];
     }
 
-
     public function getCodepro()
     {
         return $this->data['codepro'];
     }
-
 
     public function getLabel()
     {
@@ -201,14 +207,14 @@ class CompletePurchaseResponse extends AbstractResponse
         $string = $this->getNotificationType() . '&'
             . $this->getOperationId() . '&'
             . $this->getAmount() . '&'
-            . $this->getCurrency() . '&'
+            . $this->getCurrencyId() . '&'
             . $this->getDatetime() . '&'
             . $this->getSender() . '&'
             . $this->getCodepro() . '&'
             . $this->request->getPassword() . '&'
             . $this->getLabel();
 
-        return (sha1($string) == $this->getSha1Hash());
+        return sha1($string);
     }
 
     public function getAmount()
