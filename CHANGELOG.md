@@ -1,10 +1,18 @@
-hiqdev/omnipay-yandexmoney changelog
-------------------------------------
+## [Under development]
 
-## Under development
+## [1.0.0] - 2017-03-30
 
-- Redone to `omnipay-yandexmoney`
-- Added basics
+- Implemented P2P money trasfer ([@SilverFire], [@hiqsol])
 
-## Development started 2015-10-23
+## [Development started] - 2015-10-23
 
+[@hiqsol]: https://github.com/hiqsol
+[sol@hiqdev.com]: https://github.com/hiqsol
+[@SilverFire]: https://github.com/SilverFire
+[d.naumenko.a@gmail.com]: https://github.com/SilverFire
+[@tafid]: https://github.com/tafid
+[andreyklochok@gmail.com]: https://github.com/tafid
+[@BladeRoot]: https://github.com/BladeRoot
+[bladeroot@gmail.com]: https://github.com/BladeRoot
+[Under development]: https://github.com/hiqdev/omnipay-yandexmoney/releases
+[1.0.0]: https://github.com/hiqdev/omnipay-yandexmoney/releases/tag/1.0.0
