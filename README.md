@@ -11,6 +11,7 @@
 
 [Omnipay](https://github.com/omnipay/omnipay) is a framework agnostic, multi-gateway payment
 processing library for PHP 5.3+.
+
 This package implements [Yandex.Money](https://money.yandex.ru/) support for Omnipay.
 
 ## Installation
@@ -36,4 +37,4 @@ to the require section of your composer.json.
 This project is released under the terms of the MIT [license](LICENSE).
 Read more [here](http://choosealicense.com/licenses/mit).
 
-Copyright © 2017, HiQDev (http://hiqdev.com/)
+Copyright © 2015-2017, HiQDev (http://hiqdev.com/)
