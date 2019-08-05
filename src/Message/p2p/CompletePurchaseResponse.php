@@ -238,7 +238,7 @@ class CompletePurchaseResponse extends AbstractResponse
 
     public function getFee()
     {
-        return (string)($this->getAmount() - $this->getWithdrawAmount());
+        return (string)($this->getWithdrawAmount()-$this->getAmount());
     }
 
     public function getAmount()
