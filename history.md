@@ -1,5 +1,10 @@
 ## [Under development]
 
+## [1.1.0] - 2019-08-05
+
+    - [56ca4e3] 2019-08-05 Implemented fee calcultaion [@SilverFire]
+    - [b00ff2e] 2017-08-06 csfixed [@hiqsol]
+
 ## [1.0.0] - 2017-03-30
 
 - Implemented P2P money trasfer
@@ -48,5 +53,8 @@
 [2bb50e0]: https://github.com/hiqdev/omnipay-yandexmoney/commit/2bb50e0
 [e901012]: https://github.com/hiqdev/omnipay-yandexmoney/commit/e901012
 [fa5f24f]: https://github.com/hiqdev/omnipay-yandexmoney/commit/fa5f24f
-[Under development]: https://github.com/hiqdev/omnipay-yandexmoney/releases
+[Under development]: https://github.com/hiqdev/omnipay-yandexmoney/compare/1.0.0...HEAD
 [1.0.0]: https://github.com/hiqdev/omnipay-yandexmoney/releases/tag/1.0.0
+[56ca4e3]: https://github.com/hiqdev/omnipay-yandexmoney/commit/56ca4e3
+[b00ff2e]: https://github.com/hiqdev/omnipay-yandexmoney/commit/b00ff2e
+[1.1.0]: https://github.com/hiqdev/omnipay-yandexmoney/compare/1.0.0...1.1.0
