@@ -1,5 +1,9 @@
 ## [Under development]
 
+## [1.1.1] - 2019-08-05
+
+- Implemented fees calcultaion ([@SilverFire])
+
 ## [1.1.0] - 2019-08-05
 
 ## [1.0.0] - 2017-03-30
@@ -16,6 +20,7 @@
 [andreyklochok@gmail.com]: https://github.com/tafid
 [@BladeRoot]: https://github.com/BladeRoot
 [bladeroot@gmail.com]: https://github.com/BladeRoot
-[Under development]: https://github.com/hiqdev/omnipay-yandexmoney/compare/1.0.0...HEAD
+[Under development]: https://github.com/hiqdev/omnipay-yandexmoney/compare/1.1.0...HEAD
 [1.0.0]: https://github.com/hiqdev/omnipay-yandexmoney/releases/tag/1.0.0
 [1.1.0]: https://github.com/hiqdev/omnipay-yandexmoney/compare/1.0.0...1.1.0
+[1.1.1]: https://github.com/hiqdev/omnipay-yandexmoney/compare/1.1.0...1.1.1
