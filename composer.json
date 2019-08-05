@@ -48,7 +48,7 @@
         "omnipay/common": "~2.3"
     },
     "require-dev": {
-        "omnipay/tests": "*",
+        "omnipay/tests": "^2.1.1",
         "hiqdev/hidev-hiqdev": "*",
         "hiqdev/hidev-php": "*"
     },
