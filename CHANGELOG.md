@@ -2,6 +2,8 @@
 
 ## [3.0.0] - 2019-10-17
 
+- Update to Omnipay v3 ([@SilverFire])
+
 ## [1.1.1] - 2019-08-05
 
 - Implemented fees calcultaion ([@SilverFire])

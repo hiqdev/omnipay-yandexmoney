@@ -2,6 +2,7 @@
 
 ## [3.0.0] - 2019-10-17
 
+- Update to Omnipay v3
     - [a34b45f] 2019-10-17 Update to Omnipay v3 [@SilverFire]
 
 ## [1.1.1] - 2019-08-05
