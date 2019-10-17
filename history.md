@@ -1,5 +1,9 @@
 ## [Under development]
 
+## [3.0.0] - 2019-10-17
+
+    - [a34b45f] 2019-10-17 Update to Omnipay v3 [@SilverFire]
+
 ## [1.1.1] - 2019-08-05
 
 - Implemented fees calcultaion
@@ -65,3 +69,5 @@
 [1.1.0]: https://github.com/hiqdev/omnipay-yandexmoney/compare/1.0.0...1.1.0
 [92505b0]: https://github.com/hiqdev/omnipay-yandexmoney/commit/92505b0
 [1.1.1]: https://github.com/hiqdev/omnipay-yandexmoney/compare/1.1.0...1.1.1
+[a34b45f]: https://github.com/hiqdev/omnipay-yandexmoney/commit/a34b45f
+[3.0.0]: https://github.com/hiqdev/omnipay-yandexmoney/compare/1.1.1...3.0.0

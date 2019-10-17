@@ -1,5 +1,7 @@
 ## [Under development]
 
+## [3.0.0] - 2019-10-17
+
 ## [1.1.1] - 2019-08-05
 
 - Implemented fees calcultaion ([@SilverFire])
@@ -24,3 +26,4 @@
 [1.0.0]: https://github.com/hiqdev/omnipay-yandexmoney/releases/tag/1.0.0
 [1.1.0]: https://github.com/hiqdev/omnipay-yandexmoney/compare/1.0.0...1.1.0
 [1.1.1]: https://github.com/hiqdev/omnipay-yandexmoney/compare/1.1.0...1.1.1
+[3.0.0]: https://github.com/hiqdev/omnipay-yandexmoney/compare/1.1.1...3.0.0
