@@ -12,6 +12,8 @@ namespace Omnipay\YandexMoney\Message\p2p;
 
 abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
 {
+    public static $preffix = 'php.nerchant.yandex.request.sender';
+
     public function getAccount()
     {
         return $this->getParameter('account');

@@ -58,5 +58,10 @@
             "Omnipay\\YandexMoney\\Tests\\": "tests",
             "Omnipay\\YandexMoney\\Tests\\Stubs\\": "tests/stubs"
         }
+    },
+    "extra": {
+        "config-plugin": {
+            "params": "config/params.php"
+        }
     }
 }

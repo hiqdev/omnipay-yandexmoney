@@ -10,6 +10,8 @@
 
 namespace Omnipay\YandexMoney\Message\p2p;
 
+use Yii;
+
 /**
  * YandexMoney Purchase Request
  */
@@ -29,26 +31,27 @@ class PurchaseRequest extends AbstractRequest
     {
         $this->validate('account', 'description', 'transactionId', 'amount', 'paymentMethod', 'returnUrl', 'cancelUrl');
 
-        $data = [];
-        $data['receiver'] = $this->getAccount();
-        $data['formcomment'] = $this->getDescription();
-        $data['short-dest'] = $this->getDescription();
-        $data['writable-targets'] = 'false';
-        $data['comment-needed'] = 'true';
-        $data['label'] = $this->getTransactionId();
-        $data['quickpay-form'] = 'shop';
-        $data['targets'] = 'Order ' . $this->getTransactionId();
-        $data['sum'] = $this->getAmount();
-        $data['comment'] = $this->getComment();
-        $data['need-fio'] = 'yes';
-        $data['need-email'] = 'yes';
-        $data['need-phone'] = 'false';
-        $data['need-address'] = 'false';
+        $config = Yii::$app->params;
+        $data = [
+            'receiver' => $this->getAccount(),
+            'formcomment' => $this->getDescription(),
+            'short-dest' => $this->getDescription(),
+            'writable-targets' => 'false',
+            'comment-needed' => 'true',
+            'label' => $this->getTransactionId(),
+            'quickpay-form' => 'shop',
+            'targets' => 'Order ' . $this->getTransactionId(),
+            'sum' => $this->getAmount(),
+            'comment' => $this->getComment(),
+            'paymentType' => $this->getPaymentMethod(),
+            'successURL' => $this->getReturnUrl(),
+            'failURL' => $this->getCancelUrl(),
+        ];
 
-        $data['paymentType'] = $this->getPaymentMethod();
-
-        $data['successURL'] = $this->getReturnUrl();
-        $data['failURL'] = $this->getCancelUrl();
+        foreach (['need-fio', 'need-email', 'need-phone', 'need-address'] as $k) {
+            $config[self::$preffix . "." . $k] = $config[self::$preffix . "." . $k] ?? true;
+            $data[$k] = $config[self::$preffix . "." . $k] === false ? "false" : "yes";
+        }
 
         return $data;
     }
