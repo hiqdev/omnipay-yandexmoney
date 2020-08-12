@@ -224,6 +224,11 @@ class CompletePurchaseResponse extends AbstractResponse
         return sha1($string);
     }
 
+    public function getFee()
+    {
+        return (string)($this->getWithdrawAmount()-$this->getAmount());
+    }
+
     public function getAmount()
     {
         return $this->data['amount'];
