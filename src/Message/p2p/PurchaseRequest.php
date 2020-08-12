@@ -10,6 +10,8 @@
 
 namespace Omnipay\YandexMoney\Message\p2p;
 
+use Yii;
+
 /**
  * YandexMoney Purchase Request
  */
@@ -28,6 +30,9 @@ class PurchaseRequest extends AbstractRequest
     public function getData()
     {
         $this->validate('account', 'description', 'transactionId', 'amount', 'paymentMethod', 'returnUrl', 'cancelUrl');
+        foreach (['name', 'email', 'phone', 'address'] as $name) {
+            $params[$name] = !isset(Yii::$app->params["php.merchant.yandex.request.sender.{$name}"]) || Yii::$app->params["php.merchant.yandex.request.sender.{$name}"] === true;
+        }
 
         $data = [];
         $data['receiver'] = $this->getAccount();
@@ -40,10 +45,10 @@ class PurchaseRequest extends AbstractRequest
         $data['targets'] = 'Order ' . $this->getTransactionId();
         $data['sum'] = $this->getAmount();
         $data['comment'] = $this->getComment();
-        $data['need-fio'] = 'yes';
-        $data['need-email'] = 'yes';
-        $data['need-phone'] = 'false';
-        $data['need-address'] = 'false';
+        $data['need-fio'] = $params['name']  ? 'yes' : 'false';
+        $data['need-email'] = $params['email'] ?  'yes' : 'false';
+        $data['need-phone'] = $params['phone'] ? 'yes' : 'false';
+        $data['need-address'] = $params['address'] ? 'yes' : 'false';
 
         $data['paymentType'] = $this->getPaymentMethod();
 
