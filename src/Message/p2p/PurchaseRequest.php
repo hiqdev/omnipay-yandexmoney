@@ -40,10 +40,10 @@ class PurchaseRequest extends AbstractRequest
         $data['targets'] = 'Order ' . $this->getTransactionId();
         $data['sum'] = $this->getAmount();
         $data['comment'] = $this->getComment();
-        $data['need-fio'] = 'yes';
-        $data['need-email'] = 'yes';
-        $data['need-phone'] = 'false';
-        $data['need-address'] = 'false';
+        $data['need-fio'] = $this->getNeed();
+        $data['need-email'] = $this->getNeed();
+        $data['need-phone'] = $this->getNeed();
+        $data['need-address'] = $this->getNeed();
 
         $data['paymentType'] = $this->getPaymentMethod();
 
