@@ -67,7 +67,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         return $this->setParameter('need', $value);
     }
 
-    public function getNeed(): ?string
+    public function getNeed(): string
     {
         return $this->getParameter('need') ?? 'yes';
     }
