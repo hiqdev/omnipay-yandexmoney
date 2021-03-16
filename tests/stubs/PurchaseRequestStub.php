@@ -13,7 +13,7 @@ namespace Omnipay\YandexMoney\Tests\Stubs;
 /**
  * Class PurchaseRequestStub
  *
- * @see https://money.yandex.ru/doc.xml?id=526991
+ * @see https://yoomoney.ru/doc.xml?id=526991
  */
 class PurchaseRequestStub
 {

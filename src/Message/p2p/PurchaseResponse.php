@@ -30,7 +30,7 @@ class PurchaseResponse extends AbstractResponse implements RedirectResponseInter
 
     public function getRedirectUrl()
     {
-        return 'https://money.yandex.ru/quickpay/confirm.xml';
+        return 'https://yoomoney.ru/quickpay/confirm.xml';
     }
 
     public function getRedirectMethod()
