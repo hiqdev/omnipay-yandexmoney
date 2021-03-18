@@ -21,5 +21,5 @@ class PurchaseResponseStub
     public $transactionId = 'ID_123456';
     public $comment = 'I need them all!';
     public $paymentMethod = 'PC';
-    public $sci = 'https://money.yandex.ru/quickpay/confirm.xml';
+    public $sci = 'https://yoomoney.ru/quickpay/confirm.xml';
 }
