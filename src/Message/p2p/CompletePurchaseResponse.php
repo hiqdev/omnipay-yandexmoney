@@ -42,30 +42,25 @@ class CompletePurchaseResponse extends AbstractResponse
         return $this->data['notification_type'];
     }
 
-
     public function getNotification_type()
     {
         return $this->data['notification_type'];
     }
-
 
     public function getFirstname()
     {
         return $this->data['firstname'];
     }
 
-
     public function getFathersname()
     {
         return $this->data['fathersname'];
     }
 
-
     public function getLastname()
     {
         return $this->data['lastname'];
     }
-
 
     public function getOperationId()
     {
@@ -137,54 +132,45 @@ class CompletePurchaseResponse extends AbstractResponse
         return $this->data['withdraw_amount'];
     }
 
-
     public function getWithdrawAmount()
     {
         return $this->data['withdraw_amount'];
     }
-
 
     public function getUnaccepted()
     {
         return $this->data['unaccepted'];
     }
 
-
     public function getCity()
     {
         return $this->data['city'];
     }
-
 
     public function getBuilding()
     {
         return $this->data['building'];
     }
 
-
     public function getSuite()
     {
         return $this->data['suite'];
     }
-
 
     public function getStreet()
     {
         return $this->data['street'];
     }
 
-
     public function getFlat()
     {
         return $this->data['flat'];
     }
 
-
     public function getEmail()
     {
         return $this->data['email'];
     }
-
 
     public function getPhone()
     {
@@ -244,5 +230,10 @@ class CompletePurchaseResponse extends AbstractResponse
     public function getAmount()
     {
         return $this->data['amount'];
+    }
+
+    public function getPaymentMethod(): ?string
+    {
+        return $this->request->getPaymentMethod() ?? 'AC';
     }
 }
