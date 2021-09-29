@@ -61,8 +61,8 @@ class PurchaseRequestTest extends TestCase
         $this->assertSame('Order ' . $this->stub->transactionId, $data['targets']);
         $this->assertSame($this->stub->amount, $data['sum']);
         $this->assertSame($this->stub->comment, $data['comment']);
-        $this->assertSame('yes', $data['need-fio']);
-        $this->assertSame('yes', $data['need-email']);
+        $this->assertSame('false', $data['need-fio']);
+        $this->assertSame('false', $data['need-email']);
         $this->assertSame('false', $data['need-phone']);
         $this->assertSame('false', $data['need-address']);
         $this->assertSame($this->stub->paymentMethod, $data['paymentType']);
