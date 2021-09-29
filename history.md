@@ -1,5 +1,16 @@
 ## [Under development]
 
+## [2.0.1] - 2021-09-29
+
+- Updated to follow v.3.0.1 changes
+    - [dc92518] 2021-09-29 Updated to follow v.3.0.1 changes [@SilverFire]
+- `money.yandex.ru` got changed to `yoomoney.ru`
+    - [2ff34ca] 2021-03-16 money.yandex.ru => yoomoney.ru [@BladeRoot]
+    - [7297fdc] 2021-03-16 type hinting [@BladeRoot]
+- Other minor changes
+    - [136d387] 2021-03-15 add dinamical parametr [@BladeRoot]
+    - [1ce9f9a] 2021-04-14 add getting payment method from request [@BladeRoot]
+
 ## [1.1.1] - 2019-08-05
 
 - Implemented fees calcultaion
@@ -65,3 +76,9 @@
 [1.1.0]: https://github.com/hiqdev/omnipay-yandexmoney/compare/1.0.0...1.1.0
 [92505b0]: https://github.com/hiqdev/omnipay-yandexmoney/commit/92505b0
 [1.1.1]: https://github.com/hiqdev/omnipay-yandexmoney/compare/1.1.0...1.1.1
+[dc92518]: https://github.com/hiqdev/omnipay-yandexmoney/commit/dc92518
+[1ce9f9a]: https://github.com/hiqdev/omnipay-yandexmoney/commit/1ce9f9a
+[2ff34ca]: https://github.com/hiqdev/omnipay-yandexmoney/commit/2ff34ca
+[7297fdc]: https://github.com/hiqdev/omnipay-yandexmoney/commit/7297fdc
+[136d387]: https://github.com/hiqdev/omnipay-yandexmoney/commit/136d387
+[2.0.1]: https://github.com/hiqdev/omnipay-yandexmoney/compare/1.1.1...2.0.1

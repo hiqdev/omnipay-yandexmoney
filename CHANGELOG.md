@@ -1,5 +1,11 @@
 ## [Under development]
 
+## [2.0.1] - 2021-09-29
+
+- Updated to follow v.3.0.1 changes ([@SilverFire])
+- `money.yandex.ru` got changed to `yoomoney.ru` ([@BladeRoot])
+- Other minor changes ([@BladeRoot])
+
 ## [1.1.1] - 2019-08-05
 
 - Implemented fees calcultaion ([@SilverFire])
@@ -24,3 +30,4 @@
 [1.0.0]: https://github.com/hiqdev/omnipay-yandexmoney/releases/tag/1.0.0
 [1.1.0]: https://github.com/hiqdev/omnipay-yandexmoney/compare/1.0.0...1.1.0
 [1.1.1]: https://github.com/hiqdev/omnipay-yandexmoney/compare/1.1.0...1.1.1
+[2.0.1]: https://github.com/hiqdev/omnipay-yandexmoney/compare/1.1.1...2.0.1
