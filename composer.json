@@ -52,6 +52,7 @@
         "hiqdev/hidev-hiqdev": "dev-master",
         "hiqdev/hidev-php": "dev-master"
     },
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "Omnipay\\YandexMoney\\": "src",

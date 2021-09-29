@@ -52,7 +52,7 @@ class CompletePurchaseResponseTest extends TestCase
 
     public function testSignException()
     {
-        $this->setExpectedException('Omnipay\Common\Exception\InvalidResponseException', 'Failed to validate signature');
+        $this->expectException('Omnipay\Common\Exception\InvalidResponseException', 'Failed to validate signature');
         $this->createRequest([
             'sha1_hash' => ':)',
         ])->send();
@@ -60,7 +60,7 @@ class CompletePurchaseResponseTest extends TestCase
 
     public function testStateException()
     {
-        $this->setExpectedException('Omnipay\Common\Exception\InvalidResponseException', 'The payment was not success');
+        $this->expectException('Omnipay\Common\Exception\InvalidResponseException', 'The payment was not success');
         $this->createRequest([
             'unaccepted' => 'true',
             'sha1_hash' => '4cc1dc34b6316fc6dfcc265d9732386869a9c49c',
@@ -103,7 +103,7 @@ class CompletePurchaseResponseTest extends TestCase
         $this->assertSame($stub->flat, $response->getFlat());
         $this->assertSame($stub->email, $response->getEmail());
         $this->assertSame($stub->phone, $response->getPhone());
-        $this->assertSame((string)($stub->amount-$stub->withdraw_amount), $response->getFee());
+        $this->assertSame((string)($stub->withdraw_amount-$stub->amount), $response->getFee());
 
         $this->assertSame(false, $response->getMessage());
         $this->assertSame($this->password, $response->request->getSecret());
