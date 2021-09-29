@@ -1,5 +1,20 @@
 ## [Under development]
 
+## [3.0.1] - 2021-09-29
+
+- Add getting payment method from request
+    - [5b7c790] 2021-04-14 add getting payment method from request [@BladeRoot]
+- `money.yandex.ru` got changed to `yoomoney.ru`
+    - [95201e2] 2021-03-16 money.yandex.ru => yoomoney.ru [@BladeRoot]
+    - [c1a5c0b] 2021-09-29 Fix tests [@SilverFire]
+- Do not ask additinal client data by default
+    - [fc4ea4a] 2021-03-18 Merge pull request #3 from bladeroot/ask-client-info [@SilverFire]
+    - [c4b97c9] 2021-04-14 do not ask client data [@BladeRoot]
+- Other minor changes
+    - [1389d57] 2021-03-15 add dinamical parametr [@BladeRoot]
+    - [1695603] 2021-03-16 type hinting [@BladeRoot]
+    - [92e8f05] 2021-04-14 Merge pull request #4 from bladeroot/yandexmoney-improvment [@SilverFire]
+
 ## [3.0.0] - 2019-10-17
 
 - Update to Omnipay v3
@@ -38,6 +53,8 @@
 
 ## [Development started] - 2015-10-23
 
+## [dev] - 2019-10-17
+
 [@hiqsol]: https://github.com/hiqsol
 [sol@hiqdev.com]: https://github.com/hiqsol
 [@SilverFire]: https://github.com/SilverFire
@@ -63,7 +80,7 @@
 [2bb50e0]: https://github.com/hiqdev/omnipay-yandexmoney/commit/2bb50e0
 [e901012]: https://github.com/hiqdev/omnipay-yandexmoney/commit/e901012
 [fa5f24f]: https://github.com/hiqdev/omnipay-yandexmoney/commit/fa5f24f
-[Under development]: https://github.com/hiqdev/omnipay-yandexmoney/compare/1.1.0...HEAD
+[Under development]: https://github.com/hiqdev/omnipay-yandexmoney/compare/3.0.0...HEAD
 [1.0.0]: https://github.com/hiqdev/omnipay-yandexmoney/releases/tag/1.0.0
 [56ca4e3]: https://github.com/hiqdev/omnipay-yandexmoney/commit/56ca4e3
 [b00ff2e]: https://github.com/hiqdev/omnipay-yandexmoney/commit/b00ff2e
@@ -72,3 +89,13 @@
 [1.1.1]: https://github.com/hiqdev/omnipay-yandexmoney/compare/1.1.0...1.1.1
 [a34b45f]: https://github.com/hiqdev/omnipay-yandexmoney/commit/a34b45f
 [3.0.0]: https://github.com/hiqdev/omnipay-yandexmoney/compare/1.1.1...3.0.0
+[c1a5c0b]: https://github.com/hiqdev/omnipay-yandexmoney/commit/c1a5c0b
+[c4b97c9]: https://github.com/hiqdev/omnipay-yandexmoney/commit/c4b97c9
+[92e8f05]: https://github.com/hiqdev/omnipay-yandexmoney/commit/92e8f05
+[5b7c790]: https://github.com/hiqdev/omnipay-yandexmoney/commit/5b7c790
+[fc4ea4a]: https://github.com/hiqdev/omnipay-yandexmoney/commit/fc4ea4a
+[95201e2]: https://github.com/hiqdev/omnipay-yandexmoney/commit/95201e2
+[1695603]: https://github.com/hiqdev/omnipay-yandexmoney/commit/1695603
+[1389d57]: https://github.com/hiqdev/omnipay-yandexmoney/commit/1389d57
+[Development started]: https://github.com/hiqdev/omnipay-yandexmoney/compare/dev...Development started
+[3.0.1]: https://github.com/hiqdev/omnipay-yandexmoney/compare/3.0.0...3.0.1
