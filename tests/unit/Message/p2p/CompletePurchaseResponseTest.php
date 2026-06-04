@@ -23,7 +23,7 @@ class CompletePurchaseResponseTest extends TestCase
      */
     protected $stub;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -55,7 +55,7 @@ class CompletePurchaseResponseTest extends TestCase
         $this->expectException(\Omnipay\Common\Exception\InvalidResponseException::class);
         $this->expectExceptionMessage('Failed to validate signature');
         $this->createRequest([
-            'sha1_hash' => ':)',
+            'sign' => ':)',
         ])->send();
     }
 
@@ -65,7 +65,7 @@ class CompletePurchaseResponseTest extends TestCase
         $this->expectExceptionMessage('The payment was not success');
         $this->createRequest([
             'unaccepted' => 'true',
-            'sha1_hash' => '4cc1dc34b6316fc6dfcc265d9732386869a9c49c',
+            'sign' => '37a5e308a0592f025387045ff5c961b7f353d06290013c1bf528a70cd40bea67',
         ])->send();
     }
 
@@ -94,8 +94,9 @@ class CompletePurchaseResponseTest extends TestCase
         $this->assertSame($stub->fathersname, $response->getFathersname());
         $this->assertSame($stub->lastname, $response->getLastname());
         $this->assertSame(false, $response->isRedirect());
-        $this->assertSame($stub->sha1_hash, $response->getSha1Hash());
-        $this->assertSame($stub->sha1_hash, $response->getSha1_hash());
+        $this->assertSame($stub->sign, $response->getSign());
+        $this->assertNull($response->getSha1Hash());
+        $this->assertNull($response->getSha1_hash());
         $this->assertSame($stub->withdraw_amount, $response->getWithdraw_amount());
         $this->assertSame($stub->withdraw_amount, $response->getWithdrawAmount());
         $this->assertSame($stub->city, $response->getCity());

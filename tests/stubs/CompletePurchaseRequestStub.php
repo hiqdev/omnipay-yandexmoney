@@ -27,7 +27,7 @@ class CompletePurchaseRequestStub
     public $suite = '';
     public $sender = 41001823272298;
     public $phone = '';
-    public $sha1_hash = '4cc1dc34b6316fc6dfcc265d9732386869a9c49c';
+    public $sign = 'c28831cfabd6cf0964986a0ac641d54fc8446a9af07deb4f360772e2bb105bef';
     public $street = '';
     public $flat = '';
     public $fathersname = '';
