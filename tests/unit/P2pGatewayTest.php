@@ -26,7 +26,7 @@ class P2pGatewayTest extends GatewayTestCase
     protected $description = 'Test completePurchase description';
     protected $amount = '29.03';
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 

@@ -29,7 +29,7 @@ class CompletePurchaseRequestTest extends TestCase
 
     protected $password = 'R0eMjxF3JgCkgSvdydWvyAXv';
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 

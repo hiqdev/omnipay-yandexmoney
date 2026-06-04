@@ -28,7 +28,15 @@ class CompletePurchaseResponse extends AbstractResponse
     {
         parent::__construct($request, $data);
 
-        if ($this->getSha1Hash() !== $this->calculateHash()) {
+        if (isset($data['sign'])) {
+            if ($data['sign'] !== $this->calculateSignHash()) {
+                throw new InvalidResponseException('Failed to validate signature');
+            }
+        } elseif (isset($data['sha1_hash'])) {
+            if ($data['sha1_hash'] !== $this->calculateSha1Hash()) {
+                throw new InvalidResponseException('Failed to validate signature');
+            }
+        } else {
             throw new InvalidResponseException('Failed to validate signature');
         }
 
@@ -112,9 +120,14 @@ class CompletePurchaseResponse extends AbstractResponse
         return $this->getLabel();
     }
 
-    public function getSha1Hash()
+    public function getSign(): ?string
     {
-        return $this->data['sha1_hash'];
+        return $this->data['sign'] ?? null;
+    }
+
+    public function getSha1Hash(): ?string
+    {
+        return $this->data['sha1_hash'] ?? null;
     }
 
     public function getTime()
@@ -122,9 +135,9 @@ class CompletePurchaseResponse extends AbstractResponse
         return $this->getDatetime();
     }
 
-    public function getSha1_hash()
+    public function getSha1_hash(): ?string
     {
-        return $this->data['sha1_hash'];
+        return $this->getSha1Hash();
     }
 
     public function getWithdraw_amount()
@@ -207,7 +220,7 @@ class CompletePurchaseResponse extends AbstractResponse
         return $this->getOperationId();
     }
 
-    public function calculateHash()
+    public function calculateSha1Hash(): string
     {
         $string = $this->getNotificationType() . '&'
             . $this->getOperationId() . '&'
@@ -220,6 +233,19 @@ class CompletePurchaseResponse extends AbstractResponse
             . $this->getLabel();
 
         return sha1($string);
+    }
+
+    public function calculateSignHash(): string
+    {
+        $data = $this->data;
+        unset($data['sign']);
+        ksort($data);
+        $parts = [];
+        foreach ($data as $key => $value) {
+            $parts[] = $key . '=' . rawurlencode((string)$value);
+        }
+
+        return hash_hmac('sha256', implode('&', $parts), $this->request->getPassword());
     }
 
     public function getFee()
