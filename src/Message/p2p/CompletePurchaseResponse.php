@@ -29,11 +29,11 @@ class CompletePurchaseResponse extends AbstractResponse
         parent::__construct($request, $data);
 
         if (isset($data['sign'])) {
-            if ($data['sign'] !== $this->calculateSignHash()) {
+            if (!hash_equals($this->calculateSignHash(), (string)$data['sign'])) {
                 throw new InvalidResponseException('Failed to validate signature');
             }
         } elseif (isset($data['sha1_hash'])) {
-            if ($data['sha1_hash'] !== $this->calculateSha1Hash()) {
+            if (!hash_equals($this->calculateSha1Hash(), (string)$data['sha1_hash'])) {
                 throw new InvalidResponseException('Failed to validate signature');
             }
         } else {
@@ -237,6 +237,11 @@ class CompletePurchaseResponse extends AbstractResponse
 
     public function calculateSignHash(): string
     {
+        $password = (string)$this->request->getPassword();
+        if ($password === '') {
+            throw new \RuntimeException('Gateway notification secret (password) is not configured');
+        }
+
         $data = $this->data;
         unset($data['sign']);
         ksort($data);
@@ -245,7 +250,17 @@ class CompletePurchaseResponse extends AbstractResponse
             $parts[] = $key . '=' . rawurlencode((string)$value);
         }
 
-        return hash_hmac('sha256', implode('&', $parts), $this->request->getPassword());
+        return hash_hmac('sha256', implode('&', $parts), $password);
+    }
+
+    /**
+     * @deprecated Use calculateSha1Hash() instead.
+     */
+    public function calculateHash(): string
+    {
+        trigger_error('calculateHash() is deprecated, use calculateSha1Hash()', E_USER_DEPRECATED);
+
+        return $this->calculateSha1Hash();
     }
 
     public function getFee()

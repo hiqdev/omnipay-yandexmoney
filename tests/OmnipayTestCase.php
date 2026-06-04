@@ -13,7 +13,7 @@ class TestCase extends \PHPUnit\Framework\TestCase
 
     protected function getHttpRequest(): HttpRequest
     {
-        return HttpRequest::createFromGlobals();
+        return new HttpRequest();
     }
 }
 
