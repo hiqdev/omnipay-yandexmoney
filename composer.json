@@ -49,9 +49,7 @@
         "omnipay/common": "^3.0"
     },
     "require-dev": {
-        "omnipay/tests": "^3.0",
-        "hiqdev/hidev-hiqdev": "dev-master",
-        "hiqdev/hidev-php": "dev-master"
+        "omnipay/tests": "^4.2"
     },
     "autoload": {
         "psr-4": {

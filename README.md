@@ -4,9 +4,6 @@
 
 [![Latest Stable Version](https://poser.pugx.org/hiqdev/omnipay-yandexmoney/v/stable)](https://packagist.org/packages/hiqdev/omnipay-yandexmoney)
 [![Total Downloads](https://poser.pugx.org/hiqdev/omnipay-yandexmoney/downloads)](https://packagist.org/packages/hiqdev/omnipay-yandexmoney)
-[![Build Status](https://img.shields.io/travis/hiqdev/omnipay-yandexmoney.svg)](https://travis-ci.org/hiqdev/omnipay-yandexmoney)
-[![Scrutinizer Code Coverage](https://img.shields.io/scrutinizer/coverage/g/hiqdev/omnipay-yandexmoney.svg)](https://scrutinizer-ci.com/g/hiqdev/omnipay-yandexmoney/)
-[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/hiqdev/omnipay-yandexmoney.svg)](https://scrutinizer-ci.com/g/hiqdev/omnipay-yandexmoney/)
 [![Dependency Status](https://www.versioneye.com/php/hiqdev:omnipay-yandexmoney/dev-master/badge.svg)](https://www.versioneye.com/php/hiqdev:omnipay-yandexmoney/dev-master)
 
 [Omnipay](https://github.com/omnipay/omnipay) is a framework agnostic, multi-gateway payment
